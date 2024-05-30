@@ -28,7 +28,7 @@ def restart_assistant():
     st.rerun()
 
 def main() -> None:
-    llm_model = st.sidebar.selectbox("Select Model", options=["llama3","phi", "gemma", "mixtral","llama2-uncensored"])
+    llm_model = st.sidebar.selectbox("Select Model", options=["phi", "llama3", "gemma", "mixtral","llama2-uncensored"])
     if "llm_model" not in st.session_state:
         st.session_state["llm_model"] = llm_model
     elif st.session_state["llm_model"] != llm_model:
